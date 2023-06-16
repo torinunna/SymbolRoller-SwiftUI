@@ -24,6 +24,7 @@ struct SymbolRollerView: View {
                 .font(.system(size: 40, weight: .bold))
             Button {
                 print("Button Tapped")
+                imageName = symbols.randomElement()!
             } label: {
                 HStack {
                     Image(systemName: "arrow.3.trianglepath")
