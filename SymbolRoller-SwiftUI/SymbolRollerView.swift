@@ -11,8 +11,18 @@ struct SymbolRollerView: View {
     
     let symbols: [String] = ["sun.min", "moon", "cloud", "wind", "snowflake"]
     
+    @State var imageName: String = "moon"
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Image(systemName: imageName)
+            Text(imageName)
+            Button {
+                print("Button Tapped")
+            }label: {
+                 Text("Reload")
+            }
+        }
     }
 }
 
