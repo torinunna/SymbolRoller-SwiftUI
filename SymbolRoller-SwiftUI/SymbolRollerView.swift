@@ -15,11 +15,17 @@ struct SymbolRollerView: View {
     
     var body: some View {
         VStack {
+            
+            Spacer()
+            
             Image(systemName: imageName)
                 .renderingMode(.template)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .padding()
+            
+            Spacer()
+            
             Text(imageName)
                 .font(.system(size: 40, weight: .bold))
             Button {
