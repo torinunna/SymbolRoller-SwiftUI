@@ -24,9 +24,17 @@ struct SymbolRollerView: View {
                 .font(.system(size: 40, weight: .bold))
             Button {
                 print("Button Tapped")
-            }label: {
-                 Text("Reload")
+            } label: {
+                HStack {
+                    Image(systemName: "arrow.3.trianglepath")
+                    VStack {
+                        Text("Reload")
+                            .font(.system(size: 30, weight: .bold))
+                        Text("Click me to reload")
+                    }
+                }
             }
+            .foregroundColor(.white)
             .frame(maxWidth: .infinity, minHeight: 80)
             .background(.pink)
             .cornerRadius(40)
